@@ -19,9 +19,14 @@ public class UrlController {
 
     @PostMapping("create")
     public String convertToShortUrl(@RequestBody Url longUrl) {
-        urlService.shortenUrl(longUrl);
-        return "Uzun url adresiniz kaydedildi." + System.lineSeparator() +
-        "Kaydedilen url: " + longUrl.getLongUrl();
+        if ( !longUrl.getLongUrl().isEmpty()) {
+            urlService.shortenUrl(longUrl);
+            return "Uzun url adresiniz kaydedildi." + System.lineSeparator() +
+                    "Kaydedilen url: " + longUrl.getLongUrl();
+        }
+        else {
+            return  "Kisaltmak istediginiz url adresini yazmadiniz.";
+        }
     }
 
     @GetMapping("getlonglink")
@@ -29,5 +34,4 @@ public class UrlController {
         String url = urlService.getUrlByKey(shortUrl);
         return url;
     }
-
 }
