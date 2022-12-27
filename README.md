@@ -9,7 +9,7 @@ http://localhost:8081/api/v1/getlonglink?shortUrl=linkadresim  adresinden de yuk
 
 ![short](https://user-images.githubusercontent.com/6651143/209711962-25c1b966-a380-4bfa-8ae6-0ed6872b7e64.png)
 
-Toplam yapılan işlem bu kadar.
+---------------------  Toplam yapılan işlem bu kadar. -----------------
 
 
 
