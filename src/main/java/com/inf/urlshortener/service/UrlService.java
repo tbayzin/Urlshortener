@@ -38,15 +38,7 @@ public class UrlService {
             return urlRepository.getUrlByKeyUrl(key).getLongUrl().toString();
 
     }
-        /*
-        if ((urls.containsKey(key))) {
-            return urls.values().toString();
-        }
-        else {
-            return "belirtilen kisa url kayitli degil";
-        }
-    }
-         */
+
 
     // murmur3 de kullanilabilirdi.Ben kendim bir hash metodu yazdım
     public String shortenUrl(@NonNull Url url) {

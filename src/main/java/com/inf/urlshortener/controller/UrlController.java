@@ -22,7 +22,8 @@ public class UrlController {
         if ( !longUrl.getLongUrl().isEmpty()) {
             urlService.shortenUrl(longUrl);
             return "Uzun url adresiniz kaydedildi." + System.lineSeparator() +
-                    "Kaydedilen url: " + longUrl.getLongUrl();
+                    "Kaydettiginiz long url: " + longUrl.getLongUrl() + System.lineSeparator() +
+                     "Cevrilen kisa urliniz: " + longUrl.getKeyUrl();
         }
         else {
             return  "Kisaltmak istediginiz url adresini yazmadiniz.";
